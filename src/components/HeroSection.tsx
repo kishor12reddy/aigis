@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Zap, Clock, Eye } from "lucide-react";
 import heroCyber from "@/assets/hero-cyber.jpg";
+import PlatformMarquee from "./PlatformMarquee";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-24 pb-16 bg-gradient-background">
+    <section className="min-h-screen pt-24 pb-8 bg-gradient-background">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Content */}
@@ -15,9 +16,9 @@ const HeroSection = () => {
               Protect Your AI Applications
             </Badge>
             
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
               Keep Your{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-primary bg-clip-text text-transparent animate-glow-pulse">
                 AI Apps Safe
               </span>
               <br />
@@ -76,6 +77,9 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Platform Marquee */}
+        <PlatformMarquee />
       </div>
     </section>
   );
